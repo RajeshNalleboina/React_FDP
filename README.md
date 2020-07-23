@@ -19,3 +19,16 @@
    dark | black
    light |  text as light gray(white background)
    white |  text as white (white background)
+
+
+# Gird system:
+==============
+
++ Gridsystem involve main role for responsiveness of an application
++ Grid system has 5 default classes with respective devices to achieve responsive of a web page
++ 12 columns for each row in a page
+
+    .         | Exatra small  (<576px) | small    (>=576px)   |Medium  devices (>=768px)  |  Large devices  (>=992px)   |Extra large devices (>=1200px)
+    ------------------| -----------------------|----------------------|---------------------------|-----------------------------|-------------------------------         
+    class prefix      | .col                   |         .col-sm      |           .col-md         |     .col-lg                 |.col-xs     
+    No of columns  |12|12|12|12|12
