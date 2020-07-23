@@ -32,3 +32,14 @@
     ------------------| -----------------------|----------------------|---------------------------|-----------------------------|-------------------------------         
     class prefix      | .col                   |         .col-sm      |           .col-md         |     .col-lg                 |.col-xs     
     No of columns  |12|12|12|12|12
+
+# Tables:
+==========
+ - .table table-bordered
+    - table-striped
+    - table-dark
+    - thead-dark
+    - table-hover
+    - table-borderless
+ - We can apply contextual class for table
+    
