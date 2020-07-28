@@ -112,4 +112,51 @@ Example for fetch blob(image):
 </body>
 </html>
 ```
+Example for fetch json to html page:
+====================================
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<img src="" id="image1">
+<div class="main">
+	<div class="left">
+		
+	</div>
+	<div class="right">
+		
+	</div>
+</div>
+<script type="text/javascript">
+	fetch('data.json').then(
+		function(response) {
+	// return response.blob()
+	console.log(response);
+	return response.json();
+}).then(data =>{
+	console.log(data);
+	profile(data.profile)
+}).catch(error=>{
+	console.error(error);
+	console.log("error!");
+})
+
+var main=document.querySelector('.main');
+var left=document.querySelector('.left');
+
+var profile= function (info){
+
+	var h2=document.createElement("h2");
+	h2.textContent=info.name;
+	left.appendChild(h2);
+}
+
+	main.appendChild(left);
+</script>
+</body>
+</html>
+```
 
