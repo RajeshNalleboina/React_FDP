@@ -43,3 +43,38 @@
     - table-borderless
  - We can apply contextual class for table
     
+    
+# JSON:
+  + **JSON** - JavaScript Object Notation
+  + Json mainly used to store and transfer data between the webapplications and servers
+  + JSon filename extension is **.json**
+  + Json data is a pair of key and value( Key is a string,value is any datatype)
+  + Data should be separated by cammas
+ 
+### JSON Datatypes:
+===================
++ Number
++ String
++ Object
++ Array
++ Boolean
++ Null
+
+Example:
+========
+```
+{
+	"profile":{
+		"name":"Kalyan",
+		"Age":25,
+		"Collegues":["Sam","Ankith","Jack"],
+		"Education":{
+			"SSC":"St.Marys High School in Vijayawada",
+			"Inter":"Nri junior college at guntur",
+			"B.tech":"Universal college"
+		}
+	}
+}
+```
+
+  
