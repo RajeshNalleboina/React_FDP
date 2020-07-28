@@ -77,4 +77,39 @@ Example:
 }
 ```
 
-  
+# Fetch API:
+=============
+
++ fetch method return a promise to the response to the request
++ fetch method has one argument is must and it is a path for the resourse file
++ it returns a response and it may be text or blob or json
++ We have to use a server(Here we are using a web server for chrome)
+
+Example for fetch blob(image):
+===============================
+```
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<img src="" id="image1">
+<script type="text/javascript">
+	fetch('images/admin.png').then(
+		function(response) {
+	// return response.blob()
+	console.log(response);
+	return response.blob();
+}).then(blob =>{
+	console.log(blob);
+	document.getElementById("imkage1").src=URL.createObjectURL(blob);
+}).catch(error=>{
+	console.error(error);
+	console.log("error!");
+})
+</script>
+</body>
+</html>
+```
+
