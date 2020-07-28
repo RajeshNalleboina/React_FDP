@@ -80,7 +80,7 @@ Example:
 # Fetch API:
 =============
 
-+ fetch method return a promise to the response to the request
++ fetch method return a promise to the response to that request
 + fetch method has one argument is must and it is a path for the resourse file
 + it returns a response and it may be text or blob or json
 + We have to use a server(Here we are using a web server for chrome)
