@@ -85,6 +85,16 @@ Example:
 + it returns a response and it may be text or blob or json
 + We have to use a server(Here we are using a web server for chrome)
 
+
+Example for response text:
+==========================
+```
+fetch('data.txt')
+.then(response=> response.text())
+.then(function(data){
+	console.log(data);
+})
+```
 Example for fetch blob(image):
 ===============================
 ```
