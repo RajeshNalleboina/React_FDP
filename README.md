@@ -160,3 +160,34 @@ var profile= function (info){
 </html>
 ```
 
+# forEach and map functions
+
++ Both are applicable for arrays
+### foreach:
++ the data can return in the form of normal elements ,when array is not const
+```
+ let myAwesomeArray = [1, 2, 3, 4, 5]
+myAwesomeArray.forEach(x =>console.log( x*2))
+
+o/p: 2
+4
+6
+8
+10
+```
++ If array is const foreEach returns undefined
+```
+ const myAwesomeArray = [1, 2, 3, 4, 5]
+const demo=myAwesomeArray.forEach(x => x*2)
+console.log(demo);
+o/p: is undefined
+```
+
+## map:
+=======
++ If array is const map returns new array with transmission of data
+```
+ const myAwesomeArray = [1, 2, 3, 4, 5]
+const demo=myAwesomeArray.map(x => x*2)
+console.log(demo);
+```
