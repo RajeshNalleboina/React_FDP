@@ -1,9 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>:: Bootstrap Tables ::</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
-welcome
+	<div class="container mt-5">
+<div class="table-responsive-sm">
+	<table class="table table-bordered table-striped ">
+	<thead class="bg bg-primary">
+		<tr>
+		<th scope="col">S.No</th>
+		<th>Continent</th>
+		<th>First_Name</th>
+		<th>Last_Name</th>
+		<th>Age</th>
+		<th colspan="2">Actions</th>
+	    </tr>
+	
+	</thead>
+	<tbody>
+		<tr>
+		<td>1</td>
+		<td rowspan="2">Non Asia</td>
+		<td>Jeff</td>
+		<td>Bezos</td>
+		<td>55</td>
+		<td>Edit</td>
+		<td>Delete</td>
+		
+	</tr>
+	<tr class="bg-success">
+		<td>2</td>
+		<td>Warren</td>
+		<td>Buffet</td>
+		<td>65</td>
+		<td>Edit</td>
+		<td>Delete</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Asia</td>
+		<td class="bg-danger">Mukesh</td>
+		<td>Ambani</td>
+		<td>62</td>
+		<td>Edit</td>
+		<td>Delete</td>
+	</tr>
+	</tbody>
+	
+</table>
+</div>
+</div>
+<script type="text/javascript">
+fetch('data.txt')
+.then(response=> response.text())
+.then(function(data){
+	console.log(data);
+})
+
+</script>
 </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>:: Fetch with JSON Data ::</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="main">
+	<div class="left">
+		
+	</div>
+	<div class="right">
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+	fetch('data.json').
+	then(response => response.json()).
+	then(data =>
+   {
+		profile_fun(data.profile);
+      details(data.details);
+		})
+
+var main=document.querySelector('.main');
+var left=document.querySelector('.left');
+var right=document.querySelector('.right');
+var profile_fun = function(info){
+   
+  
+
+   var image1=document.createElement('img');
+   image1.src=info.profile_pic;
+   left.appendChild(image1);
+
+    var name=document.createElement('h1');
+   name.textContent=info.name;
+   left.appendChild(name);
+    
+    var email=document.createElement('a');
+   email.href="mailto:"+info.email;
+   email.classList.add('link');
+   email.textContent=info.email
+   left.appendChild(email);
+
+   var mobile=document.createElement('a');
+   mobile.href="telto:"+info.mobilenumber;
+   email.classList.add('link');
+   mobile.textContent="+91 "+info.mobilenumber;
+   left.appendChild(mobile);
+   var br=document.createElement('br');
+   left.appendChild(br);
+   var role=document.createElement('a');
+   role.href="telto:"+info.role;
+   role.classList.add('role');
+   role.textContent=info.role;
+   left.appendChild(role);
+}
+
+var details=function(det){
+    
+    var summary=document.createElement("h2");
+    summary.textContent="summary";
+    right.appendChild(summary);
+    var hr=document.createElement("hr");
+    right.appendChild(hr);
+
+    var list=document.createElement("ul");
+
+    det.summary.map(data=>
+     { 
+      var li=document.createElement("li");
+      li.textContent=data;
+      list.appendChild(li);
+      })
+    
+right.appendChild(list);
+ 
+
+
+
+    var skills=document.createElement("h2");
+    skills.textContent="Skills";
+    right.appendChild(skills);
+    var hr=document.createElement("hr");
+    right.appendChild(hr);
+
+   
+
+    det.skills.map(skill_data=>
+     { 
+      var skilltype=document.createElement("h3");
+      skilltype.textContent=skill_data.type;
+      right.appendChild(skilltype);
+      
+      skill_data.values.map(skill_value1=>
+      {
+      var skillvalue=document.createElement("h3");
+      skillvalue.textContent=skill_value1;
+      skillvalue.classList.add("skill");
+      right.appendChild(skillvalue);
+      })
+
+      })
+    
+}
+
+
+main.appendChild(left);
+main.appendChild(right);
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+	"profile":
+		{
+			"name":"Jack",
+			"profile_pic":"images/admin.png",
+			"email":"jack1243@gmail.com",
+			"mobilenumber":9876541230,
+			"role":"Software Developer"
+		},
+	"details":
+		{
+			"summary" :[
+				"Having knowledge on Front-end technologies Html,css and Javascript",
+				"Having practical exposure on back-end technologies like node and express",
+				"Buil projects using frameworks Bootstrap,Express and react"
+			],
+			"skills":[
+				{
+					"type":"Programming languages",
+					"values":["Java","c"," c++"]
+				},
+				{
+					"type":"Front-end Technologies",
+					"values":["HTML","css","Javascript"]
+				},
+				{
+					"type":"frameworks",
+					"values":["Bootstrap","react","Express"]
+				}
+			]
+		}
+
+}
