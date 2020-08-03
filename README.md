@@ -272,3 +272,84 @@ class Corp extends Component{
 export default Corp;
 
 ```
+# States:
+
++  States are initialized and managed by Component
++  By using series of constructor(),super() method and state object we can initalized data (we can also take data directly as state object)
++  Data can be updated by using setState() method
+
+Example:
+========
+```
+import React,{Component} from 'react';
+
+
+
+class Employee extends Component{
+     
+     constructor(){
+     	super();
+     	this.state={name:"Kalyan"};
+     }
+     // state={name:"Kalyan"};
+
+render(){
+	setTimeout(()=>this.setState({name:"Sam"}),3000)
+	return  ( 
+		<div> 
+		    {this.state.name}
+		</div>);
+}
+
+}
+
+export default Employee;
+```
+
+Example2:
+=========
+```
+import React,{Component} from 'react';
+
+
+
+class Employees extends Component{
+     constructor(){
+     	super();
+    this.state={
+    	Users:[
+    	{name:"Kalyan",age:20},
+    	{name:"Kalyan ram",age:25},
+    	{name:"Jack",age:21},
+    	]
+    }
+
+}
+
+changeAge=()=>{
+	this.setState({
+		Users:[
+    	{name:"Kalyan",age:15},
+    	{name:"Kalyan ram",age:20},
+    	{name:"Jack Sparrow",age:20},
+    	]
+	})
+}
+render(){
+	// setTimeout(()=>this.setState({name:"Sam"}),3000)
+	return  ( 
+		<div> 
+		    {this.state.Users[0].name} age is {this.state.Users[0].age}
+		    
+		    {this.state.Users[1].name}age is{this.state.Users[1].age}
+	         {this.state.Users[2].name}age is{this.state.Users[2].age}
+		    
+		    
+		    <button onClick={this.changeAge}>Change age of employee </button>
+		</div>);
+}
+
+}
+
+export default Employees;
+```
