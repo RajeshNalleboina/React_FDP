@@ -201,3 +201,74 @@ o/p: is undefined
 const demo=myAwesomeArray.map(x => x*2)
 console.log(demo);
 ```
+
+
+#Props :
+========
+
++ Props is like arguments in function
++ Props can be passed from parent component to child component(uni directional flow)
++ Data from props is read only
+
+## props with Finctional component:
+===================================
++ letus consider Banks as parent Component,  Andhra(func) and Corp(class) as ChildComponent
+
+Banks.js:
+=========
+```
+import React from 'react';
+import Andhra from './Andhra';
+import Corp from './Corp';
+
+const Banks = () =>{
+return (
+	<div>
+	<h1>Banks is a Parent Component</h1>
+
+       <Andhra name="Andhra bank"/>
+       <Corp name="Corporation Bank" />
+	</div>);
+}
+
+export default Banks;
+```
+
+Andhra.js:
+=========
+```
+import React from 'react';
+
+const Andhra =(props)=>{
+	console.log(props.name);
+	return <div> 
+	
+	<h2>Name is:{props.name}</h2>
+
+	</div>
+}
+
+export default Andhra;
+```
+Corp.js:
+========
+```
+import React,{Component} from 'react';
+
+
+class Corp extends Component{
+          
+         render(props){
+                // console.log(this.props);
+         	return (
+
+         		<div>
+
+                   {this.props.name}
+         		</div>);
+         }
+}
+
+export default Corp;
+
+```
